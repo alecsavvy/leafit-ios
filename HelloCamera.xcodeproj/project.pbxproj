@@ -514,6 +514,7 @@
 				4D311DFB1E47E831004F77EB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4D311DFC1E47E831004F77EB /* Build configuration list for PBXNativeTarget "HelloCameraTests" */ = {
 			isa = XCConfigurationList;
@@ -522,6 +523,7 @@
 				4D311DFE1E47E831004F77EB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4D311DFF1E47E831004F77EB /* Build configuration list for PBXNativeTarget "HelloCameraUITests" */ = {
 			isa = XCConfigurationList;
@@ -530,6 +532,7 @@
 				4D311E011E47E831004F77EB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

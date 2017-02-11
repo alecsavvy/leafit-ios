@@ -1,14 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="HelloCamera" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +21,49 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xVW-Lj-W4A">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="678"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i6X-ju-vG3">
+                                <rect key="frame" x="149" y="471" width="77" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="uqc-cz-Syh"/>
+                                </constraints>
+                                <state key="normal" title="Take Photo"/>
+                                <connections>
+                                    <action selector="useCamera:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="itl-z1-W4Y"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vIx-du-TzL">
+                                <rect key="frame" x="146" y="566" width="83" height="30"/>
+                                <state key="normal" title="Camera Roll"/>
+                                <connections>
+                                    <action selector="useCameraRoll:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="crd-vr-O0j"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="i6X-ju-vG3" firstAttribute="centerX" secondItem="vIx-du-TzL" secondAttribute="centerX" id="ELk-pq-mX0"/>
+                            <constraint firstItem="xVW-Lj-W4A" firstAttribute="centerX" secondItem="vIx-du-TzL" secondAttribute="centerX" id="K3Q-eF-lfH"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="xVW-Lj-W4A" secondAttribute="bottom" constant="-11" id="L4A-p8-r7u"/>
+                            <constraint firstItem="vIx-du-TzL" firstAttribute="top" secondItem="i6X-ju-vG3" secondAttribute="bottom" constant="31" id="LVs-a8-Ihk"/>
+                            <constraint firstItem="xVW-Lj-W4A" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="SXY-D6-D6O"/>
+                            <constraint firstItem="xVW-Lj-W4A" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="a95-SE-7b0"/>
+                            <constraint firstItem="i6X-ju-vG3" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="451" id="ax0-Z0-4oX"/>
+                            <constraint firstItem="i6X-ju-vG3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bEw-dP-MCD"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="cameraRoll" destination="vIx-du-TzL" id="FP3-tm-8XX"/>
+                        <outlet property="cameraStream" destination="xVW-Lj-W4A" id="Fhu-Os-whZ"/>
+                        <outlet property="takePhoto" destination="i6X-ju-vG3" id="1Ji-wc-Tbc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="24.5" y="35.5"/>
         </scene>
     </scenes>
 </document>

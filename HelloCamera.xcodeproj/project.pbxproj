@@ -14,6 +14,7 @@
 		4D311DDF1E47E831004F77EB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D311DDD1E47E831004F77EB /* LaunchScreen.storyboard */; };
 		4D311DEA1E47E831004F77EB /* HelloCameraTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D311DE91E47E831004F77EB /* HelloCameraTests.swift */; };
 		4D311DF51E47E831004F77EB /* HelloCameraUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D311DF41E47E831004F77EB /* HelloCameraUITests.swift */; };
+		4D4717B01E58FA1B00B520BD /* Demo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4717AF1E58FA1B00B520BD /* Demo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		4D311DF01E47E831004F77EB /* HelloCameraUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HelloCameraUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D311DF41E47E831004F77EB /* HelloCameraUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelloCameraUITests.swift; sourceTree = "<group>"; };
 		4D311DF61E47E831004F77EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4D4717AF1E58FA1B00B520BD /* Demo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Demo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 				4D311DD61E47E831004F77EB /* ViewController.swift */,
 				4D311DD81E47E831004F77EB /* Main.storyboard */,
 				4D311DDB1E47E831004F77EB /* Assets.xcassets */,
+				4D4717AF1E58FA1B00B520BD /* Demo.swift */,
 				4D311DDD1E47E831004F77EB /* LaunchScreen.storyboard */,
 				4D311DE01E47E831004F77EB /* Info.plist */,
 			);
@@ -264,6 +267,7 @@
 			files = (
 				4D311DD71E47E831004F77EB /* ViewController.swift in Sources */,
 				4D311DD51E47E831004F77EB /* AppDelegate.swift in Sources */,
+				4D4717B01E58FA1B00B520BD /* Demo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

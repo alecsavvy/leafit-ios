@@ -19,8 +19,13 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     @IBOutlet weak var cameraRoll: UIButton!
     
-    @IBOutlet weak var cameraStream: UIImageView!
+    @IBOutlet weak var titleText: UILabel!
+    
+    ///@IBOutlet weak var cameraStream: UIImageView!
+    
     var newMedia: Bool?
+    
+    
     
     @IBAction func useCamera(_ sender: AnyObject) {
         if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.camera){
@@ -61,8 +66,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         if mediaType.isEqual(to: kUTTypeImage as String) {
             let image = info[UIImagePickerControllerOriginalImage]
                 as! UIImage
-            cameraStream.contentMode = UIViewContentMode.scaleAspectFill
-            cameraStream.image = image
+            ///cameraStream.contentMode = UIViewContentMode.scaleAspectFill
+            ///cameraStream.image = image
             
             
             if(newMedia == true) {
@@ -80,9 +85,12 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             let alert = UIAlertController(title: "Save Failed", message: "Failed to save image", preferredStyle: UIAlertControllerStyle.alert)
             
             let cancelAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+            print("error in saving image")
             
             alert.addAction(cancelAction)
             self.present(alert, animated:true, completion: nil)
+        } else{
+            print("error in not saving image")
         }
         
     }
@@ -94,6 +102,10 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        takePhoto.tintColor = UIColor.black
+        cameraRoll.tintColor = UIColor.black
+        takePhoto.titleLabel!.font =  UIFont(name: "HelveticaNeue-Bold", size: 20)
+        cameraRoll.titleLabel!.font =  UIFont(name: "HelveticaNeue-Bold", size: 20)
 
         
     }
@@ -105,12 +117,10 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        ///self.dataLabel!.text = dataObject
-        ///self.dataLabel.text = dataObject
-        let back = UIImage(named: "background")
-        cameraStream = UIImageView(image: back)
         
     }
+    
+    
     
     
     

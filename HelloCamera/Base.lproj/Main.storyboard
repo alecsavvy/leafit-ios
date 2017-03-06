@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="MQH-u1-Ofp">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -22,48 +21,122 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xVW-Lj-W4A">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="678"/>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="background1" translatesAutoresizingMaskIntoConstraints="NO" id="XVn-yJ-Cew">
+                                <rect key="frame" x="-325" y="-130" width="1024" height="1024"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vIx-du-TzL">
+                                <rect key="frame" x="122" y="539" width="130" height="61"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="130" id="eei-XS-KBK"/>
+                                </constraints>
+                                <state key="normal" title="Camera Roll"/>
+                                <connections>
+                                    <action selector="useCameraRoll:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="crd-vr-O0j"/>
+                                    <segue destination="JA5-Hx-5MC" kind="show" id="Zut-KI-7Yn"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i6X-ju-vG3">
-                                <rect key="frame" x="149" y="471" width="77" height="64"/>
+                                <rect key="frame" x="149" y="467" width="77" height="64"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="64" id="uqc-cz-Syh"/>
                                 </constraints>
                                 <state key="normal" title="Take Photo"/>
                                 <connections>
                                     <action selector="useCamera:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="itl-z1-W4Y"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vIx-du-TzL">
-                                <rect key="frame" x="146" y="566" width="83" height="30"/>
-                                <state key="normal" title="Camera Roll"/>
-                                <connections>
-                                    <action selector="useCameraRoll:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="crd-vr-O0j"/>
+                                    <segue destination="JA5-Hx-5MC" kind="show" id="Dse-Zw-Pjn"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="i6X-ju-vG3" firstAttribute="centerX" secondItem="vIx-du-TzL" secondAttribute="centerX" id="ELk-pq-mX0"/>
-                            <constraint firstItem="xVW-Lj-W4A" firstAttribute="centerX" secondItem="vIx-du-TzL" secondAttribute="centerX" id="K3Q-eF-lfH"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="xVW-Lj-W4A" secondAttribute="bottom" constant="-11" id="L4A-p8-r7u"/>
-                            <constraint firstItem="vIx-du-TzL" firstAttribute="top" secondItem="i6X-ju-vG3" secondAttribute="bottom" constant="31" id="LVs-a8-Ihk"/>
-                            <constraint firstItem="xVW-Lj-W4A" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="SXY-D6-D6O"/>
-                            <constraint firstItem="xVW-Lj-W4A" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="a95-SE-7b0"/>
-                            <constraint firstItem="i6X-ju-vG3" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="451" id="ax0-Z0-4oX"/>
+                            <constraint firstItem="vIx-du-TzL" firstAttribute="centerX" secondItem="XVn-yJ-Cew" secondAttribute="centerX" id="614-7I-81I"/>
+                            <constraint firstItem="XVn-yJ-Cew" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="-130" id="Kbh-L2-BKh"/>
+                            <constraint firstItem="vIx-du-TzL" firstAttribute="centerX" secondItem="i6X-ju-vG3" secondAttribute="centerX" id="SSg-fe-uzb"/>
+                            <constraint firstItem="i6X-ju-vG3" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="447" id="ax0-Z0-4oX"/>
                             <constraint firstItem="i6X-ju-vG3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bEw-dP-MCD"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="vIx-du-TzL" secondAttribute="bottom" constant="67" id="sd0-wV-mbR"/>
+                            <constraint firstItem="vIx-du-TzL" firstAttribute="top" secondItem="i6X-ju-vG3" secondAttribute="bottom" constant="8" symbolic="YES" id="zCt-U0-Rlk"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="GOA-v7-tzK"/>
                     <connections>
                         <outlet property="cameraRoll" destination="vIx-du-TzL" id="FP3-tm-8XX"/>
-                        <outlet property="cameraStream" destination="xVW-Lj-W4A" id="Fhu-Os-whZ"/>
                         <outlet property="takePhoto" destination="i6X-ju-vG3" id="1Ji-wc-Tbc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="24.5" y="35.5"/>
+            <point key="canvasLocation" x="500" y="34"/>
+        </scene>
+        <!--Demo-->
+        <scene sceneID="x8P-cg-nje">
+            <objects>
+                <tableViewController id="JA5-Hx-5MC" customClass="Demo" customModule="HelloCamera" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="62" sectionHeaderHeight="28" sectionFooterHeight="28" id="qaE-co-4M0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="tqU-1m-DDi" imageView="Ntu-g3-pjj" rowHeight="62" style="IBUITableViewCellStyleDefault" id="GBI-lR-yZV">
+                                <rect key="frame" x="0.0" y="28" width="375" height="62"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="GBI-lR-yZV" id="q42-NW-dhD">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="61"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="tqU-1m-DDi">
+                                            <rect key="frame" x="46" y="0.0" width="314" height="61"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="None" id="Ntu-g3-pjj">
+                                            <rect key="frame" x="15" y="22" width="16" height="16"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </imageView>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="JA5-Hx-5MC" id="eaF-o1-Gqf"/>
+                            <outlet property="delegate" destination="JA5-Hx-5MC" id="dxx-Mq-Gws"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mSV-Tg-qeU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1469.5999999999999" y="33.733133433283363"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="SNF-z3-bMK">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="MQH-u1-Ofp" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="2F6-i8-8Of">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="43h-WP-pur">
+                        <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="rf0-JM-kHc"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FMN-M1-3WB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-446" y="34"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="None" width="16" height="16"/>
+        <image name="background1" width="1024" height="1024"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="Zut-KI-7Yn"/>
+    </inferredMetricsTieBreakers>
 </document>

@@ -18,7 +18,7 @@ class Demo: UITableViewController {
         
         let config = URLSessionConfiguration.default
         let session = URLSession(configuration: config)
-        let url = URL(string: "http://192.168.0.8:5000/1")
+        let url = URL(string: "http://10.111.236.61:5000/1")
         
         let task = session.dataTask(with: url!, completionHandler: {
             (data, response, error) in
@@ -28,9 +28,19 @@ class Demo: UITableViewController {
             } else{
                 do {
                     if let json = try JSONSerialization.jsonObject(with: data!, options: .allowFragments)
-                    as? [String: Any]
+                    as? Dictionary<String, Any>
                     {
-                        print(json)
+                        ///print(json)
+                        var plantdata = [String:Any]()
+                        for (task, info) in json {
+                            plantdata[task] = info
+                        }
+                        
+                        for (task, info) in plantdata {
+                            print("\(task) \t \(info)")
+                            print()
+                        }
+                        
                         
                     }
                     
